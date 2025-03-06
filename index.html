@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cool Site About Belarus</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #1a8f74;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffe600;
+    }
+    .hero {
+      background: #ccece6; /* однотонный фон вместо картинки */
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.5em;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #1a8f74;
+    }
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .fact {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .fact:hover {
+      transform: translateY(-5px);
+    }
+    .fact h3 {
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      color: #1a8f74;
+    }
+    .toggle-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #1a8f74;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .toggle-btn:hover {
+      background: #145d50;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    footer p {
+      margin: 5px;
+    }
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Belarus: A Land of Wonders</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#facts">Facts</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#nature">Nature</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero section without background image -->
+  <section class="hero" id="home">
+    <div>
+      <h2>Discover Belarus</h2>
+      <p>A country of stunning nature, rich history, and cool facts!</p>
+    </div>
+  </section>
+
+  <!-- Facts Section -->
+  <section id="facts">
+    <h2 class="section-title">Cool Facts about Belarus</h2>
+    <div class="facts">
+      <div class="fact">
+        <h3>No Sea Coast</h3>
+        <p>Belarus is the largest country in Europe without access to the sea!</p>
+      </div>
+      <div class="fact">
+        <h3>Forests &amp; Swamps</h3>
+        <p>Over 35% of the land is covered by forests, with swamps taking up a significant part.</p>
+      </div>
+      <div class="fact">
+        <h3>Bison in Białowieża</h3>
+        <p>The Białowieża Forest hosts the largest population of European bison.</p>
+      </div>
+      <div class="fact">
+        <h3>IT Hub</h3>
+        <p>Belarus is a true IT paradise, home to projects like World of Tanks and Viber.</p>
+      </div>
+      <!-- Extra facts (hidden by default) -->
+      <div class="fact extra-fact" style="display: none;">
+        <h3>Interesting Denomination</h3>
+        <p>In 2016, the Belarusian ruble was re-denominated by cutting 4 zeros for easier calculations.</p>
+      </div>
+      <div class="fact extra-fact" style="display: none;">
+        <h3>Countless Rivers &amp; Lakes</h3>
+        <p>There are over 20,000 rivers and more than 10,000 lakes throughout the country!</p>
+      </div>
+      <div class="fact extra-fact" style="display: none;">
+        <h3>Bilingual Nation</h3>
+        <p>Both Belarusian and Russian are official languages, creating a unique cultural blend.</p>
+      </div>
+      <div class="fact extra-fact" style="display: none;">
+        <h3>Unique Souvenirs</h3>
+        <p>Traditional motifs and crafts make Belarusian souvenirs truly one-of-a-kind!</p>
+      </div>
+    </div>
+    <button class="toggle-btn" id="toggleFacts">Show More Facts</button>
+  </section>
+
+  <!-- History Section -->
+  <section id="history">
+    <h2 class="section-title">A Bit of History</h2>
+    <p style="max-width:800px; margin: 0 auto; text-align: center;">
+      Belarus has an ancient history dating back to the times of Kievan Rus. This land has witnessed the rise and fall of mighty principalities and left a rich legacy in architecture, literature, and traditions.
+    </p>
+  </section>
+
+  <!-- Nature Section -->
+  <section id="nature">
+    <h2 class="section-title">Nature of Belarus</h2>
+    <p style="max-width:800px; margin: 0 auto; text-align: center;">
+      From picturesque forests to endless lakes and rivers, the nature of Belarus captivates with its diversity. Visit Białowieża and enjoy the fresh air and serene atmosphere.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cool Site About Belarus. All rights reserved.</p>
+  </footer>
+
+  <!-- Script for toggling extra facts -->
+  <script>
+    const toggleBtn = document.getElementById('toggleFacts');
+    let factsVisible = false;
+    toggleBtn.addEventListener('click', function() {
+      const extraFacts = document.querySelectorAll('.extra-fact');
+      factsVisible = !factsVisible;
+      extraFacts.forEach(fact => {
+        fact.style.display = factsVisible ? 'block' : 'none';
+      });
+      toggleBtn.textContent = factsVisible ? 'Hide Extra Facts' : 'Show More Facts';
+    });
+  </script>
+</body>
+</html>
